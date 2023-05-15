@@ -1,17 +1,170 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>HTML 파일 예시</title>
-    <!-- 부트스트랩 링크 추가 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <title>게시판</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    #container {
+      width: 600px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    #post-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .post {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+    
+    .post-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    
+    .post-date {
+      color: #999;
+      font-size: 12px;
+    }
+    
+    .post-content {
+      margin-top: 10px;
+    }
+
+    .pagination {
+      justify-content: center;
+    }
+    
+    .pagination .page-link {
+      color: #000;
+    }
+    
+    .pagination .page-item.active .page-link {
+      background-color: #f9f9f9;
+      color: #000;
+      border: 1px solid #000;
+    }
+    
+    .pagination .page-item:first-child .page-link {
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+    
+    .pagination .page-item:last-child .page-link {
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+    body {
+      background-color: #f0f7fd;
+    }
+    
+    .header {
+      background-color: #3458a7;
+      padding: 20px;
+    }
+    
+    .header h1 {
+      color: #fff;
+      font-weight: bold;
+      font-size: 24px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>안녕, ChatGPT!</h1>
-        <p>이것은 예시 HTML 파일입니다.</p>
+  <div id="container">
+    <div class="header">
+        <h1>채용공고</h1>
+      </div>
+      
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">홈</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">게시판</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">최신글</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">마이페이지</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <h1>게시판</h1>
+    <ul id="post-list">
+      <li class="post">
+        <h2 class="post-title">첫 번째 게시물</h2>
+        <p class="post-date">작성일: 2023-05-15</p>
+        <div class="post-content">
+          이곳에 첫 번째 게시물의 내용이 들어갑니다.
+        </div>
+      </li>
+      <li class="post">
+        <h2 class="post-title">두 번째 게시물</h2>
+        <p class="post-date">작성일: 2023-05-14</p>
+        <div class="post-content">
+          이곳에 두 번째 게시물의 내용이 들어갑니다.
+        </div>
+      </li>
+      <li class="post">
+        <h2 class="post-title">세 번째 게시물</h2>
+        <p class="post-date">작성일: 2023-05-13</p>
+        <div class="post-content">
+          이곳에 세 번째 게시물의 내용이 들어갑니다.
+        </div>
+      </li>
+      <li class="post">
+        <h2 class="post-title">네 번째 게시물</h2>
+        <p class="post-date">작성일: 2023-05-12</p>
+        <div class="post-content">
+          이곳에 네 번째 게시물의 내용이 들어갑니다.
+        </div>
+      </li>
+      <li class="post">
+        <h2 class="post-title">다섯 번째 게시물</h2>
+        <p class="post-date">작성일: 2023-05-11</p>
+        <div class="post-content">
+          이곳에 다섯 번째 게시물의 내용이 들어갑니다.
+        </div>
+      </li>
+    </ul>
+    <nav>
+        <ul class="pagination rounded">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">이전</a>
+          </li>
+          <li class="page-item active" aria-current="page">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">다음</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-
-    <!-- 부트스트랩 스크립트 추가 -->
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</body>
-</html>
+  </body>
+  </html>
